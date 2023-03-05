@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android_Academy</string>
+    <string name="add_contacts">Add</string>
+    <string name="show_contacts">Contacts</string>
 </resources>

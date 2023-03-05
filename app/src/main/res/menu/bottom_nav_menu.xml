@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="nav_add"
-        android:title="Add"
-        android:icon="@drawable/ic_addContacts" />
+        android:id="@+id/nav_add"
+        android:title="@string/add_contacts"
+        android:icon="@drawable/ic_add_contacts" />
 
     <item
-        android:id="nav_show"
-        android:title="Contacts"
-        android:icon="@drawable/ic_showContacts" />
+        android:id="@+id/nav_show"
+        android:title="@string/show_contacts"
+        android:icon="@drawable/ic_show_contacts" />
 
 </menu>
