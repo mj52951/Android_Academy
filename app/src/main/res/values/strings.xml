@@ -2,4 +2,8 @@
     <string name="app_name">Android_Academy</string>
     <string name="add_contacts">Add</string>
     <string name="show_contacts">Contacts</string>
+    <string name="create_person">Create new person</string>
+    <string name="first_name">First name</string>
+    <string name="et_pero">Pero</string>
+
 </resources>
