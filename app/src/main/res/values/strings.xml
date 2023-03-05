@@ -11,5 +11,6 @@
     <string name="oib">OIB</string>
     <string name="et_oib">12345678</string>
     <string name="last_name">Last name</string>
+    <string name="contacts">Contacts</string>
 
 </resources>
