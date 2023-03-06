@@ -26,7 +26,10 @@ class SecondFragment : Fragment() {
         val tvContactsList: TextView = view.findViewById(R.id.tv_contacts_list)
 
         viewModel.contacts.observe(viewLifecycleOwner) {
-            tvContactsList.text = it.toString()
+            val re = Regex("[^A-Za-z0-9 \n]")
+            val listString = re.replace(it.toString(), "")
+
+            tvContactsList.text = listString
         }
     }
 
