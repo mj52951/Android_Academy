@@ -11,7 +11,7 @@ import androidx.fragment.app.activityViewModels
 
 class FirstFragment : Fragment() {
 
-    private val viewModel : ListViewModel by activityViewModels()
+    private val viewModel: ListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,16 +25,15 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val btnAdd: Button = view.findViewById(R.id.btn_add)
-        btnAdd.setOnClickListener{
-            val contactFName : EditText = view.findViewById(R.id.et_first_name)
-            val contactLName : EditText = view.findViewById(R.id.et_last_name)
-            val contactAge : EditText = view.findViewById(R.id.et_age)
-            val contactOib : EditText = view.findViewById(R.id.et_oib)
+        btnAdd.setOnClickListener {
+            val contactFName: EditText = view.findViewById(R.id.et_first_name)
+            val contactLName: EditText = view.findViewById(R.id.et_last_name)
+            val contactAge: EditText = view.findViewById(R.id.et_age)
+            val contactOib: EditText = view.findViewById(R.id.et_oib)
 
             val result = "${contactFName.text} ${contactLName.text} " +
-                    "${contactAge.text} ${contactOib.text} \n"
+                "${contactAge.text} ${contactOib.text} \n"
             viewModel.addContact(result)
         }
     }
-
 }

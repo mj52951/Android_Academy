@@ -1,13 +1,11 @@
 package com.example.android_academy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-
 class MainActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,15 +16,13 @@ class MainActivity : AppCompatActivity() {
 
         setCurrentFragment(firstFragment)
 
-        val bottomNavigationView : BottomNavigationView = findViewById(R.id.bottomNavigationView)
-        bottomNavigationView.setOnItemSelectedListener{
-
-            when (it.itemId){
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
+        bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
                 R.id.nav_add -> setCurrentFragment(firstFragment)
                 R.id.nav_show -> setCurrentFragment(secondFragment)
             }
             true
-
         }
     }
 

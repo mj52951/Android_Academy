@@ -10,7 +10,7 @@ import androidx.fragment.app.activityViewModels
 
 class SecondFragment : Fragment() {
 
-    private val viewModel : ListViewModel by activityViewModels()
+    private val viewModel: ListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,12 +26,10 @@ class SecondFragment : Fragment() {
         val tvContactsList: TextView = view.findViewById(R.id.tv_contacts_list)
 
         viewModel.contacts.observe(viewLifecycleOwner) {
-            val re = Regex("[^A-Za-z0-9 \n]")
+            val re = Regex("[^A-Za-z\\d \n]")
             val listString = re.replace(it.toString(), "")
 
             tvContactsList.text = listString
         }
     }
-
-
 }
