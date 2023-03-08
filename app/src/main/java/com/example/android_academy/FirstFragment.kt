@@ -32,8 +32,12 @@ class FirstFragment : Fragment() {
             val contactAge: EditText = view.findViewById(R.id.et_age)
             val contactOib: EditText = view.findViewById(R.id.et_oib)
 
-            val contact = Contact(contactFName.text.toString(), contactLName.text.toString(),
-                contactAge.text.toString().toInt(), contactOib.text.toString().toInt())
+            val contact = Contact(
+                contactFName.text.toString(),
+                contactLName.text.toString(),
+                contactAge.text.toString().toInt(),
+                contactOib.text.toString().toInt()
+            )
 
             viewModel.addContact(contact)
 
@@ -41,7 +45,6 @@ class FirstFragment : Fragment() {
             contactLName.text.clear()
             contactAge.text.clear()
             contactOib.text.clear()
-
         }
     }
 }

@@ -24,11 +24,11 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val linearLayout : LinearLayout = view.findViewById(R.id.linearLayout01)
+        val linearLayout: LinearLayout = view.findViewById(R.id.linearLayout01)
 
         viewModel.contacts.observe(viewLifecycleOwner) { list ->
 
-            list.forEach{
+            list.forEach {
                 val tempTextView = TextView(requireContext())
                 tempTextView.text = it.toString()
                 tempTextView.textSize = 25f
