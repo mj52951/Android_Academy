@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -23,13 +24,16 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tvContactsList: TextView = view.findViewById(R.id.tv_contacts_list)
+        val linearLayout : LinearLayout = view.findViewById(R.id.linearLayout01)
 
-        viewModel.contacts.observe(viewLifecycleOwner) {
-            val re = Regex("[^A-Za-z\\d \n]")
-            val listString = re.replace(it.toString(), "")
+        viewModel.contacts.observe(viewLifecycleOwner) { list ->
 
-            tvContactsList.text = listString
+            list.forEach{
+                val tempTextView = TextView(requireContext())
+                tempTextView.text = it.toString()
+                tempTextView.textSize = 25f
+                linearLayout.addView(tempTextView)
+            }
         }
     }
 }
