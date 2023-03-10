@@ -12,10 +12,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_create_person"
+        android:id="@+id/tv_add_movie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_person"
+        android:text="@string/add_movie"
         android:textSize="40sp"
         android:textStyle="bold"
         android:paddingTop="15dp"
@@ -23,67 +23,51 @@
         />
 
     <TextView
-        android:id="@+id/tv_first_name"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/first_name"
+        android:text="@string/title"
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/et_first_name"
+        android:id="@+id/et_title"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textSize="30sp"
         android:autofillHints="name"
-        android:hint="@string/et_pero"/>
+        android:hint="@string/et_prestige"/>
 
     <TextView
-        android:id="@+id/tv_last_name"
+        android:id="@+id/tv_release_year"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/last_name"
+        android:text="@string/release_year"
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/et_last_name"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textSize="30sp"
-        android:autofillHints="name"
-        android:hint="@string/et_peric"/>
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/age"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/et_age"
+        android:id="@+id/et_release_year"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:textSize="30sp"
-        android:hint="@string/et_20"
+        android:hint="@string/et_2006"
         android:autofillHints="" />
 
     <TextView
-        android:id="@+id/tv_oib"
+        android:id="@+id/tv_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/oib"
+        android:text="@string/rating"
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/et_oib"
+        android:id="@+id/et_rating"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:textSize="30sp"
-        android:hint="@string/et_oib"
+        android:hint="@string/et_9"
         android:autofillHints="" />
 
     <RelativeLayout

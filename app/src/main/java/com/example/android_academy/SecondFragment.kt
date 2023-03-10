@@ -26,7 +26,7 @@ class SecondFragment : Fragment() {
 
         val linearLayout: LinearLayout = view.findViewById(R.id.linearLayout01)
 
-        viewModel.contacts.observe(viewLifecycleOwner) { list ->
+        viewModel.movies.observe(viewLifecycleOwner) { list ->
 
             list.forEach {
                 val tempTextView = TextView(requireContext())

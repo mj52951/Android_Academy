@@ -27,24 +27,21 @@ class FirstFragment : Fragment() {
         val btnAdd: Button = view.findViewById(R.id.btn_add)
 
         btnAdd.setOnClickListener {
-            val contactFName: EditText = view.findViewById(R.id.et_first_name)
-            val contactLName: EditText = view.findViewById(R.id.et_last_name)
-            val contactAge: EditText = view.findViewById(R.id.et_age)
-            val contactOib: EditText = view.findViewById(R.id.et_oib)
+            val movieTitle: EditText = view.findViewById(R.id.et_title)
+            val movieYear: EditText = view.findViewById(R.id.et_release_year)
+            val movieRating: EditText = view.findViewById(R.id.et_rating)
 
-            val contact = Contact(
-                contactFName.text.toString(),
-                contactLName.text.toString(),
-                contactAge.text.toString().toInt(),
-                contactOib.text.toString().toInt()
+            val movie = Movie(
+                movieTitle.text.toString(),
+                movieYear.text.toString().toInt(),
+                movieRating.text.toString().toInt()
             )
 
-            viewModel.addContact(contact)
+            viewModel.addMovie(movie)
 
-            contactFName.text.clear()
-            contactLName.text.clear()
-            contactAge.text.clear()
-            contactOib.text.clear()
+            movieTitle.text.clear()
+            movieYear.text.clear()
+            movieRating.text.clear()
         }
     }
 }
