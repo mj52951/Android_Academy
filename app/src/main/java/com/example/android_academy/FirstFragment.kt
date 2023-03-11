@@ -2,6 +2,7 @@ package com.example.android_academy
 
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.android_academy.databinding.FragmentFirstBinding
@@ -15,7 +16,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
         super.onViewCreated(view, savedInstanceState)
 
         binding = FragmentFirstBinding.bind(view)
-
+        
         binding.btnAdd.setOnClickListener {
 
             val movie = Movie(
@@ -26,9 +27,13 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
             viewModel.addMovie(movie)
 
-            binding.etTitle.text.clear()
-            binding.etReleaseYear.text.clear()
-            binding.etRating.text.clear()
+            binding.etTitle.clearText()
+            binding.etReleaseYear.clearText()
+            binding.etRating.clearText()
         }
+    }
+
+    fun EditText.clearText(){
+        this.text.clear()
     }
 }
