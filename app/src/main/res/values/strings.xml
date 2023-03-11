@@ -11,4 +11,9 @@
     <string name="et_9">9</string>
     <string name="watchlist">Watchlist</string>
     <string name="genre">Genre</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
 </resources>

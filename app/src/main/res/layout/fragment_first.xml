@@ -42,6 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="30sp"
+        android:textColor="@color/black"
         android:autofillHints="name"
         android:hint="@string/et_prestige"/>
 
@@ -66,9 +67,11 @@
 
     <TextView
         android:id="@+id/tv_genre"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_release_year"
         android:textSize="25sp" />
 
@@ -79,29 +82,55 @@
         android:contentDescription="@string/genre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_genre" />
+        app:layout_constraintTop_toBottomOf="@id/tv_genre"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/tv_rating"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sp_genre"
         android:textSize="25sp" />
 
-
-
-
-     <EditText
-        android:id="@+id/et_rating"
-        android:layout_width="300dp"
+    
+    <RadioGroup
+        android:id="@+id/rg_rating"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="30sp"
-        android:hint="@string/et_9"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/tv_rating"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+      <RadioButton
+          android:id="@+id/r1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/one"/>
+      <RadioButton
+          android:id="@+id/r2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/two"/>
+      <RadioButton
+          android:id="@+id/r3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/three"/>
+      <RadioButton
+          android:id="@+id/r4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/four"/>
+      <RadioButton
+          android:id="@+id/r5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/five"/>
+    </RadioGroup>
 
 
     <RelativeLayout
@@ -110,7 +139,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/et_rating"
+        app:layout_constraintTop_toBottomOf="@id/rg_rating"
         android:paddingTop="10dp">
 
       <Button

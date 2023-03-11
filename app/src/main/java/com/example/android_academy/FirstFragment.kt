@@ -36,18 +36,28 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
         binding.btnAdd.setOnClickListener {
 
+            val checkedRadioButton = binding.rgRating.checkedRadioButtonId
+            var rating = 1
+
+            when (checkedRadioButton){
+                binding.r1.id -> rating = 1
+                binding.r2.id -> rating = 2
+                binding.r3.id -> rating = 3
+                binding.r4.id -> rating = 4
+                binding.r5.id -> rating = 5
+            }
+
+
             val movie = Movie(
                 binding.etTitle.text.toString(),
                 binding.etReleaseYear.text.toString().toInt(),
-                binding.etRating.text.toString().toInt(),
+                rating,
                 selectedGenre
             )
 
             viewModel.addMovie(movie)
-
             binding.etTitle.clearText()
             binding.etReleaseYear.clearText()
-            binding.etRating.clearText()
         }
     }
 
