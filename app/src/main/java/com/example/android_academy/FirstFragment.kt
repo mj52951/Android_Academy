@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.android_academy.databinding.FragmentFirstBinding
@@ -47,17 +48,25 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
                 binding.r5.id -> rating = 5
             }
 
+            if (binding.etTitle.text.isEmpty()){
+                Toast.makeText(requireContext(), "You need to set the movie title.", Toast.LENGTH_LONG).show()
+            } else if (binding.etReleaseYear.text.isEmpty() || !(binding.etReleaseYear.text.toString().toInt() in 1900..2023)) {
+                Toast.makeText(requireContext(), "You need to set the release year to be between 1900 and 2023.", Toast.LENGTH_LONG).show()
+            } else if (checkedRadioButton == -1){
+                Toast.makeText(requireContext(),"You need to set the rating", Toast.LENGTH_LONG).show()
+            } else {
 
-            val movie = Movie(
-                binding.etTitle.text.toString(),
-                binding.etReleaseYear.text.toString().toInt(),
-                rating,
-                selectedGenre
-            )
+                val movie = Movie(
+                    binding.etTitle.text.toString(),
+                    binding.etReleaseYear.text.toString().toInt(),
+                    rating,
+                    selectedGenre
+                )
 
-            viewModel.addMovie(movie)
-            binding.etTitle.clearText()
-            binding.etReleaseYear.clearText()
+                viewModel.addMovie(movie)
+                binding.etTitle.clearText()
+                binding.etReleaseYear.clearText()
+            }
         }
     }
 
