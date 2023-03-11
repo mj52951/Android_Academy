@@ -2,7 +2,7 @@ package com.example.android_academy
 
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.android_academy.databinding.FragmentSecondBinding
@@ -18,12 +18,10 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         binding = FragmentSecondBinding.bind(view)
 
         viewModel.movies.observe(viewLifecycleOwner) { list ->
-            list.forEach {
-                val tempTextView = TextView(requireContext())
-                tempTextView.text = it.toString()
-                tempTextView.textSize = 25f
-                binding.constraintLayout03.addView(tempTextView)
-            }
+            val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, list)
+            binding.lvMovies.adapter = adapter
         }
     }
+
+
 }
