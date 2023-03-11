@@ -53,16 +53,16 @@
         android:text="@string/release_year"
         android:textSize="25sp" />
 
-        <EditText
-            android:id="@+id/et_release_year"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textSize="30sp"
-            android:hint="@string/et_2006"
-            app:layout_constraintTop_toBottomOf="@id/tv_release_year"
-            app:layout_constraintStart_toStartOf="parent"
-            android:autofillHints="" />
+      <EditText
+          android:id="@+id/et_release_year"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          android:textSize="30sp"
+          android:hint="@string/et_2006"
+          app:layout_constraintTop_toBottomOf="@id/tv_release_year"
+          app:layout_constraintStart_toStartOf="parent"
+          android:autofillHints="" />
 
         <TextView
             android:id="@+id/tv_rating"
@@ -72,34 +72,34 @@
             app:layout_constraintTop_toBottomOf="@id/et_release_year"
             android:textSize="25sp" />
 
-            <EditText
-                android:id="@+id/et_rating"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:textSize="30sp"
-                android:hint="@string/et_9"
-                app:layout_constraintTop_toBottomOf="@id/tv_rating"
-                app:layout_constraintStart_toStartOf="parent"
-                android:autofillHints="" />
+        <EditText
+            android:id="@+id/et_rating"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="30sp"
+            android:hint="@string/et_9"
+            app:layout_constraintTop_toBottomOf="@id/tv_rating"
+            app:layout_constraintStart_toStartOf="parent"
+            android:autofillHints="" />
 
 
-            <RelativeLayout
-                android:id="@+id/RelativeLayout01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/et_rating"
-                android:paddingTop="10dp">
+      <RelativeLayout
+          android:id="@+id/RelativeLayout01"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="vertical"
+          app:layout_constraintTop_toBottomOf="@id/et_rating"
+          android:paddingTop="10dp">
 
-             <Button
-                 android:id="@+id/btn_add"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="@string/add" />
+          <Button
+              android:id="@+id/btn_add"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/add" />
 
-            </RelativeLayout>
+      </RelativeLayout>
 
 
   </androidx.constraintlayout.widget.ConstraintLayout>
