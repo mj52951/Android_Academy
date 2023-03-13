@@ -20,7 +20,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
         binding = FragmentFirstBinding.bind(view)
 
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, Genre.values())
+        val adapter = ArrayAdapter(requireContext(), R.layout.spinner, Genre.values())
         binding.spGenre.adapter = adapter
 
         var selectedGenre: Genre = Genre.Comedy
@@ -50,7 +50,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
 
             if (binding.etTitle.text.isEmpty()){
                 Toast.makeText(requireContext(), "You need to set the movie title.", Toast.LENGTH_LONG).show()
-            } else if (binding.etReleaseYear.text.isEmpty() || !(binding.etReleaseYear.text.toString().toInt() in 1900..2023)) {
+            } else if (binding.etReleaseYear.text.isEmpty() || binding.etReleaseYear.text.toString().toInt() !in 1900..2023) {
                 Toast.makeText(requireContext(), "You need to set the release year to be between 1900 and 2023.", Toast.LENGTH_LONG).show()
             } else if (checkedRadioButton == -1){
                 Toast.makeText(requireContext(),"You need to set the rating", Toast.LENGTH_LONG).show()
