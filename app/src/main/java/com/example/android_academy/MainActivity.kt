@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         setCurrentFragment(firstFragment)
 
-
         binding.bottomNavigationView.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_add -> setCurrentFragment(firstFragment)

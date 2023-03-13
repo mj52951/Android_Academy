@@ -22,6 +22,4 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
             binding.lvMovies.adapter = adapter
         }
     }
-
-
 }
