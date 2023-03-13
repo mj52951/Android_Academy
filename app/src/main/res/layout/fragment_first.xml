@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/add_movie"
+        android:textColor="@color/yellow"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,6 +33,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/tv_add_movie"
         android:text="@string/title"
+        android:textColor="@color/yellow"
         android:textSize="25sp" />
 
     <EditText
@@ -42,9 +44,10 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="30sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white_yellow"
         android:autofillHints="name"
-        android:hint="@string/et_prestige"/>
+        android:hint="@string/et_prestige"
+        />
 
     <TextView
         android:id="@+id/tv_release_year"
@@ -52,6 +55,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/et_title"
         android:text="@string/release_year"
+        android:textColor="@color/yellow"
         android:textSize="25sp" />
 
     <EditText
@@ -61,6 +65,7 @@
         android:inputType="number"
         android:textSize="30sp"
         android:hint="@string/et_2006"
+        android:textColor="@color/white_yellow"
         app:layout_constraintTop_toBottomOf="@id/tv_release_year"
         app:layout_constraintStart_toStartOf="parent"
         android:autofillHints="" />
@@ -70,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/genre"
+        android:textColor="@color/yellow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_release_year"
@@ -90,6 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rating"
+        android:textColor="@color/yellow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sp_genre"
@@ -109,27 +116,32 @@
           android:id="@+id/r1"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/one"/>
+          android:text="@string/one"
+          android:textColor="@color/white_yellow"/>
       <RadioButton
           android:id="@+id/r2"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/two"/>
+          android:text="@string/two"
+          android:textColor="@color/white_yellow"/>
       <RadioButton
           android:id="@+id/r3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/three"/>
+          android:text="@string/three"
+          android:textColor="@color/white_yellow"/>
       <RadioButton
           android:id="@+id/r4"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/four"/>
+          android:text="@string/four"
+          android:textColor="@color/white_yellow"/>
       <RadioButton
           android:id="@+id/r5"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/five"/>
+          android:text="@string/five"
+          android:textColor="@color/white_yellow"/>
     </RadioGroup>
 
 

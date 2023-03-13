@@ -16,6 +16,8 @@
         android:fontFamily="@font/movie_poster"
         android:layout_height="wrap_content"
         android:text = "@string/watchlist"
+        android:textColor="@color/yellow"
+
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
