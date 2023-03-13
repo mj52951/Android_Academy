@@ -18,7 +18,7 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         binding = FragmentSecondBinding.bind(view)
 
         viewModel.movies.observe(viewLifecycleOwner) { list ->
-            val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, list)
+            val adapter = ArrayAdapter(requireContext(), R.layout.list_view, list)
             binding.lvMovies.adapter = adapter
         }
     }
