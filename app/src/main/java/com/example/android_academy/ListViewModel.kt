@@ -5,13 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class ListViewModel : ViewModel() {
-    private var _contacts: MutableLiveData<ArrayList<Contact>> = MutableLiveData(arrayListOf())
-    val contacts: LiveData<ArrayList<Contact>>
-        get() = _contacts
+    private var _movies: MutableLiveData<ArrayList<Movie>> = MutableLiveData(arrayListOf())
+    val movies: LiveData<ArrayList<Movie>>
+        get() = _movies
 
-    fun addContact(contact: Contact) {
-        val tempData = _contacts.value
-        tempData?.add(contact)
-        _contacts.value = tempData!!
+    fun addMovie(movie: Movie) {
+        val tempData = _movies.value
+        tempData?.add(movie)
+        _movies.value = tempData!!
     }
 }
