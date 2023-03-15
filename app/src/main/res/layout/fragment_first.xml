@@ -144,22 +144,14 @@
           android:textColor="@color/white_yellow"/>
     </RadioGroup>
 
-
-    <RelativeLayout
-        android:id="@+id/RelativeLayout01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/rg_rating"
-        android:paddingTop="10dp">
-
-      <Button
+    <Button
           android:id="@+id/btn_add"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/add" />
-    </RelativeLayout>
+          android:text="@string/add"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/rg_rating"/>
 
 
 
