@@ -50,7 +50,7 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
             if (binding.etTitle.text.isEmpty()) {
                 Toast.makeText(
                     requireContext(),
-                    "You need to set the movie title.",
+                    R.string.errorTitle,
                     Toast.LENGTH_LONG
                 ).show()
             } else if (binding.etReleaseYear.text.isEmpty() ||
@@ -58,13 +58,13 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
             ) {
                 Toast.makeText(
                     requireContext(),
-                    "You need to set the release year to be between 1900 and 2023.",
+                    R.string.errorYear,
                     Toast.LENGTH_LONG
                 ).show()
             } else if (checkedRadioButton == -1) {
                 Toast.makeText(
                     requireContext(),
-                    "You need to set the rating",
+                    R.string.errorRating,
                     Toast.LENGTH_LONG
                 ).show()
             } else {

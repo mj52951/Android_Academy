@@ -16,4 +16,8 @@
     <string name="three">3</string>
     <string name="four">4</string>
     <string name="five">5</string>
+    <string name="errorTitle">You need to set the movie title.</string>
+    <string name="errorYear">You need to set the release year to be between 1900 and 2023.</string>
+    <string name="errorRating">You need to set the rating.</string>
+
 </resources>
