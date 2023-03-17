@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.CircleCropTransformation
 import com.example.android_academy.R
 import com.example.android_academy.databinding.MovieListBinding
 import com.example.android_academy.models.Movie
 
-class MoviesRecyclerAdapter(val context: Context, val moviesList: ArrayList<Movie>) :
+class MoviesRecyclerAdapter(private val context: Context, private val moviesList: ArrayList<Movie>) :
     RecyclerView.Adapter<MoviesRecyclerAdapter.MovieViewHolder>(){
 
 
@@ -32,6 +34,10 @@ class MoviesRecyclerAdapter(val context: Context, val moviesList: ArrayList<Movi
             rvReleaseYear.text = movie.releaseYear.toString()
             rvGenre.text = movie.genre.toString()
             rvRating.text = movie.rating.toString()
+            rvImage.load(movie.imageUrl){
+               transformations(CircleCropTransformation())
+               placeholder(R.drawable.movie_image)
+            }
         }
 
     }

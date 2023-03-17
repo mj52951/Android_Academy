@@ -76,7 +76,8 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
                     binding.etTitle.text.toString(),
                     binding.etReleaseYear.text.toString().toInt(),
                     rating,
-                    selectedGenre
+                    selectedGenre,
+                    ""
                 )
 
                 viewModel.addMovie(movie)
