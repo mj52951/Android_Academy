@@ -1,109 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
-
-  <LinearLayout
-    android:id="@+id/LinearLayout01"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout02"
+      android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv_create_person"
+        android:id="@+id/tv_add_movie"
+        android:fontFamily="@font/movie_poster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_person"
+        android:text="@string/add_movie"
+        android:textColor="@color/yellow"
         android:textSize="40sp"
         android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         />
 
     <TextView
-        android:id="@+id/tv_first_name"
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/first_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_movie"
+        android:text="@string/title"
+        android:textColor="@color/yellow"
         android:textSize="25sp" />
 
     <EditText
-        android:id="@+id/et_first_name"
+        android:id="@+id/et_title"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
         android:textSize="30sp"
+        android:textColor="@color/white_yellow"
         android:autofillHints="name"
-        android:hint="@string/et_pero"/>
-
-    <TextView
-        android:id="@+id/tv_last_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/last_name"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/et_last_name"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:textSize="30sp"
-        android:autofillHints="name"
-        android:hint="@string/et_peric"/>
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/age"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/et_age"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="30sp"
-        android:hint="@string/et_20"
-        android:autofillHints="" />
-
-    <TextView
-        android:id="@+id/tv_oib"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/oib"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/et_oib"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="30sp"
-        android:hint="@string/et_oib"
-        android:autofillHints="" />
-
-    <RelativeLayout
-        android:id="@+id/RelativeLayout01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingTop="10dp">
-
-     <Button
-         android:id="@+id/btn_add"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="@string/add"
+        android:hint="@string/et_prestige"
         />
 
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_release_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        android:text="@string/release_year"
+        android:textColor="@color/yellow"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/et_release_year"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textSize="30sp"
+        android:hint="@string/et_2006"
+        android:textColor="@color/white_yellow"
+        app:layout_constraintTop_toBottomOf="@id/tv_release_year"
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/tv_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/genre"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_release_year"
+        android:textSize="25sp" />
+
+    <Spinner
+        android:id="@+id/sp_genre"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:contentDescription="@string/genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_genre"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/tv_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating"
+        android:textColor="@color/yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sp_genre"
+        android:textSize="25sp" />
+
+    
+    <RadioGroup
+        android:id="@+id/rg_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_rating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+      <RadioButton
+          android:id="@+id/r1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/one"
+          android:textColor="@color/white_yellow"/>
+      <RadioButton
+          android:id="@+id/r2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/two"
+          android:textColor="@color/white_yellow"/>
+      <RadioButton
+          android:id="@+id/r3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/three"
+          android:textColor="@color/white_yellow"/>
+      <RadioButton
+          android:id="@+id/r4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/four"
+          android:textColor="@color/white_yellow"/>
+      <RadioButton
+          android:id="@+id/r5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/five"
+          android:textColor="@color/white_yellow"/>
+    </RadioGroup>
+
+    <Button
+          android:id="@+id/btn_add"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/add"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/rg_rating"/>
 
 
-  </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
