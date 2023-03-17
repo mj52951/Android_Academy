@@ -1,4 +1,4 @@
-package com.example.android_academy
+package com.example.android_academy.models
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

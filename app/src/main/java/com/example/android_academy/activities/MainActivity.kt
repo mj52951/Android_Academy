@@ -1,8 +1,11 @@
-package com.example.android_academy
+package com.example.android_academy.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.android_academy.fragments.FirstFragment
+import com.example.android_academy.R
+import com.example.android_academy.fragments.SecondFragment
 import com.example.android_academy.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="setTitleText" format="string" />
+        <attr name="setTitleTextColor" format="color" />
+        <attr name="setTitleTextSize" format="dimension" />
+        <attr name="setTitleTextStyle" format="flags" />
+        <!--<attr name="setTitleText" format="string" />
+        //<attr name="setTitleText" format="string" />
+        <attr name="setTitleText" format="string" />
+        <attr name="setTitleText" format="string" />
+        <attr name="setTitleText" format="string" /> -->
+
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

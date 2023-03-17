@@ -1,11 +1,13 @@
-package com.example.android_academy
+package com.example.android_academy.fragments
 
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.example.android_academy.R
 import com.example.android_academy.databinding.FragmentSecondBinding
+import com.example.android_academy.models.ListViewModel
 
 class SecondFragment : Fragment(R.layout.fragment_second) {
 
